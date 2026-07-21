@@ -7,106 +7,79 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
-
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1616588587682-4e5c0c5c9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1616588587682-4e5c0c5c9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
         }
-
-        .game-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .game-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
-        }
+        .game-card:hover { transform: translateY(-8px); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-    <!-- Navbar -->
     <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 z-40">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-2xl">🎮</div>
                 <h1 class="logo-font text-3xl font-semibold tracking-tighter">Revende Juegos PS4</h1>
             </div>
-            
-            <a href="https://wa.me/50497647465?text=Hola%20quiero%20más%20información" 
-               target="_blank"
-               class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2 transition-colors">
+            <a href="https://wa.me/50497647465?text=Hola%20quiero%20más%20información" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2">
                 <i class="fab fa-whatsapp"></i>
                 <span>Hablar por WhatsApp</span>
             </a>
         </div>
     </nav>
 
-    <!-- Hero -->
     <header class="hero-bg h-screen flex items-center pt-20">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h2 class="text-7xl md:text-8xl font-bold logo-font tracking-tighter leading-none mb-6">
-                JUEGOS DIGITALES<br>
-                <span class="text-emerald-400">A PRECIOS BAJOS</span>
+                JUEGOS DIGITALES<br><span class="text-emerald-400">A PRECIOS BAJOS</span>
             </h2>
-            <p class="text-2xl text-zinc-400 max-w-2xl mx-auto mb-10">
-                Compra barato • Revende y gana
-            </p>
-            <a href="#juegos" class="bg-white text-black px-10 py-4 rounded-3xl font-semibold text-lg inline-flex items-center gap-3 hover:bg-zinc-200">
-                Ver catálogo completo
-            </a>
+            <a href="#juegos" class="bg-white text-black px-10 py-4 rounded-3xl font-semibold text-lg inline-flex items-center gap-3 hover:bg-zinc-200">Ver catálogo</a>
         </div>
     </header>
 
-    <!-- Juegos -->
     <section id="juegos" class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-bold logo-font tracking-tighter text-center mb-12">Juegos Disponibles</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="games-grid"></div>
         </div>
     </section>
 
     <script>
         const juegos = [
-            { titulo: "Mortal Kombat 11 Ultimate", precio: "199", imagen: "img/mk11-ultimate.jpg", plataforma: "Steam" },
-            { titulo: "Mortal Kombat 11", precio: "179", imagen: "img/mk11.jpg", plataforma: "Steam" },
-            { titulo: "FC 26", precio: "249", imagen: "img/fc26.jpg", plataforma: "EA" },
-            { titulo: "FC 25", precio: "199", imagen: "img/fc25.jpg", plataforma: "EA" },
-            { titulo: "Mortal Kombat X", precio: "199", imagen: "img/mkx.jpg", plataforma: "Steam" },
-            { titulo: "DBZ Fighters", precio: "199", imagen: "img/dbz-fighters.jpg", plataforma: "Steam" },
-            { titulo: "Supercross 6", precio: "99", imagen: "img/supercross6.jpg", plataforma: "Steam" },
-            { titulo: "Call of Duty Black Ops 3", precio: "229", imagen: "img/black-ops-3.jpg", plataforma: "Steam" },
-            { titulo: "GTA V", precio: "199", imagen: "img/gta-v.jpg", plataforma: "Steam" },
-            { titulo: "Red Dead Redemption", precio: "179", imagen: "img/rdr.jpg", plataforma: "Steam" }
+            { titulo: "Mortal Kombat 11 Ultimate", precio: "199", imagen: "img/mk11-ultimate.JPG", plataforma: "Steam" },
+            { titulo: "Mortal Kombat 11", precio: "179", imagen: "img/mk11.JPG", plataforma: "Steam" },
+            { titulo: "FC 26", precio: "249", imagen: "img/fc26.JPG", plataforma: "EA" },
+            { titulo: "FC 25", precio: "199", imagen: "img/fc25.JPG", plataforma: "EA" },
+            { titulo: "Mortal Kombat X", precio: "199", imagen: "img/mkx.JPG", plataforma: "Steam" },
+            { titulo: "DBZ Fighters", precio: "199", imagen: "img/dbz-fighters.JPG", plataforma: "Steam" },
+            { titulo: "Supercross 6", precio: "99", imagen: "img/supercross6.JPG", plataforma: "Steam" },
+            { titulo: "Call of Duty Black Ops 3", precio: "229", imagen: "img/black-ops-3.JPG", plataforma: "Steam" },
+            { titulo: "GTA V", precio: "199", imagen: "img/gta-v.JPG", plataforma: "Steam" },
+            { titulo: "Red Dead Redemption", precio: "179", imagen: "img/rdr.JPG", plataforma: "Steam" }
         ];
 
         function crearTarjetas() {
             const grid = document.getElementById('games-grid');
             grid.innerHTML = '';
-
             juegos.forEach(juego => {
                 const card = document.createElement('div');
                 card.className = 'game-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden';
-                
                 card.innerHTML = `
                     <div class="h-64 overflow-hidden bg-zinc-800">
-                        <img src="${juego.imagen}" alt="${juego.titulo}" 
-                             class="w-full h-full object-cover transition-transform hover:scale-105">
+                        <img src="${juego.imagen}" alt="${juego.titulo}" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <span class="text-xs uppercase text-emerald-400">${juego.plataforma}</span>
-                                <h3 class="font-semibold text-lg mt-1 leading-tight">${juego.titulo}</h3>
+                                <h3 class="font-semibold text-lg mt-1">${juego.titulo}</h3>
                             </div>
                             <span class="text-3xl font-bold text-emerald-400">L$${juego.precio}</span>
                         </div>
-                        <a href="https://wa.me/50497647465?text=Hola%20quiero%20comprar%20${encodeURIComponent(juego.titulo)}%20a%20L%24${juego.precio}" 
-                           target="_blank"
-                           class="block bg-emerald-500 hover:bg-emerald-600 text-center py-4 rounded-2xl font-semibold transition-colors">
+                        <a href="https://wa.me/50497647465?text=Hola%20quiero%20comprar%20${encodeURIComponent(juego.titulo)}%20a%20L%24${juego.precio}" target="_blank" class="block bg-emerald-500 hover:bg-emerald-600 text-center py-4 rounded-2xl font-semibold">
                             COMPRAR POR WHATSAPP
                         </a>
                     </div>
@@ -114,7 +87,6 @@
                 grid.appendChild(card);
             });
         }
-
         window.onload = crearTarjetas;
     </script>
 </body>

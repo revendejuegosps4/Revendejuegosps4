@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameVault • Juegos Digitales Baratos</title>
+    <title>Revende Juegos PS4 • Juegos Digitales Baratos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -32,7 +32,7 @@
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-2xl">🎮</div>
-                <h1 class="logo-font text-3xl font-semibold tracking-tighter">GameVault</h1>
+                <h1 class="logo-font text-3xl font-semibold tracking-tighter">Revende Juegos PS4</h1>
             </div>
             
             <a href="https://wa.me/50497647465?text=Hola%20quiero%20más%20información" 
@@ -65,24 +65,22 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-bold logo-font tracking-tighter text-center mb-12">Juegos Disponibles</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="games-grid">
-                <!-- Juegos generados por JS -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="games-grid"></div>
         </div>
     </section>
 
     <script>
         const juegos = [
-            { titulo: "Mortal Kombat 11 Ultimate", precio: "199", imagen: "https://images.unsplash.com/photo-1611996575749-79a3ae8c0c8f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "Mortal Kombat 11", precio: "179", imagen: "https://images.unsplash.com/photo-1611996575749-79a3ae8c0c8f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "FC 26", precio: "249", imagen: "https://images.unsplash.com/photo-1624371337955-96e5c2e5c8e0?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam / EA" },
-            { titulo: "FC 25", precio: "199", imagen: "https://images.unsplash.com/photo-1624371337955-96e5c2e5c8e0?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam / EA" },
-            { titulo: "Mortal Kombat X", precio: "199", imagen: "https://images.unsplash.com/photo-1611996575749-79a3ae8c0c8f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "DBZ Fighters", precio: "199", imagen: "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "Supercross 6", precio: "99", imagen: "https://images.unsplash.com/photo-1616588587682-4e5c0c5c9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "Call of Duty Black Ops 3", precio: "229", imagen: "https://images.unsplash.com/photo-1611996575749-79a3ae8c0c8f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "GTA V", precio: "199", imagen: "https://images.unsplash.com/photo-1616588587682-4e5c0c5c9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" },
-            { titulo: "Red Dead Redemption", precio: "179", imagen: "https://images.unsplash.com/photo-1611996575749-79a3ae8c0c8f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80", plataforma: "Steam" }
+            { titulo: "Mortal Kombat 11 Ultimate", precio: "199", imagen: "img/mk11-ultimate.jpg", plataforma: "Steam" },
+            { titulo: "Mortal Kombat 11", precio: "179", imagen: "img/mk11.jpg", plataforma: "Steam" },
+            { titulo: "FC 26", precio: "249", imagen: "img/fc26.jpg", plataforma: "EA" },
+            { titulo: "FC 25", precio: "199", imagen: "img/fc25.jpg", plataforma: "EA" },
+            { titulo: "Mortal Kombat X", precio: "199", imagen: "img/mkx.jpg", plataforma: "Steam" },
+            { titulo: "DBZ Fighters", precio: "199", imagen: "img/dbz-fighters.jpg", plataforma: "Steam" },
+            { titulo: "Supercross 6", precio: "99", imagen: "img/supercross6.jpg", plataforma: "Steam" },
+            { titulo: "Call of Duty Black Ops 3", precio: "229", imagen: "img/black-ops-3.jpg", plataforma: "Steam" },
+            { titulo: "GTA V", precio: "199", imagen: "img/gta-v.jpg", plataforma: "Steam" },
+            { titulo: "Red Dead Redemption", precio: "179", imagen: "img/rdr.jpg", plataforma: "Steam" }
         ];
 
         function crearTarjetas() {
@@ -94,8 +92,9 @@
                 card.className = 'game-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden';
                 
                 card.innerHTML = `
-                    <div class="h-64 overflow-hidden">
-                        <img src="${juego.imagen}" alt="${juego.titulo}" class="w-full h-full object-cover">
+                    <div class="h-64 overflow-hidden bg-zinc-800">
+                        <img src="${juego.imagen}" alt="${juego.titulo}" 
+                             class="w-full h-full object-cover transition-transform hover:scale-105">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
